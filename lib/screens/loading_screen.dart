@@ -13,7 +13,8 @@ class _LoadingScreenState extends State<LoadingScreen> {
       body: Center(
         child: RaisedButton(
           onPressed: () async {
-            Position position = await getCurrentPosition(desiredAccuracy: LocationAccuracy.low);
+            Position position = await getCurrentPosition(desiredAccuracy: LocationAccuracy.high);
+            print(position);
           },
           child: Text('Get Location'),
         ),
